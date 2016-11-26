@@ -11,3 +11,4 @@
 对于现在还在用的公共lib包放到pom.xml里面了,移除了数据库访问jar,一部分早期的lib还是保留了下来,使用addjars-maven-plugin统一打包到jar里面了.
 
 具体的使用范例参考jor-sample.因为目前jor项目还没放到公共仓库,要跑起来的话自己先建nexus上传吧.
+有问题可以给我邮件: cfanlu@sina.com
