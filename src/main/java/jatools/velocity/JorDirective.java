@@ -118,11 +118,10 @@ public class JorDirective extends Directive {
             if (parameters != null) {
                 for (String key : parameters.keySet()) {
                     Object val = parameters.get(key);
-
-                    if (logger.isDebugEnabled()) {
-                        logger.debug("res.11" + key + " = " + val);
-                    }
-                    job.setParameter(key, val);
+//                    if (logger.isDebugEnabled()) {
+//                        logger.debug("res.11" + key + " = " + val);
+//                    }
+                    job.setParameter("$" + key, val);
                 }
             }
 

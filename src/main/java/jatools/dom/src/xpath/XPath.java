@@ -99,7 +99,6 @@ public class XPath implements XPathProcessor {
      * DOCUMENT ME!
      *
      * @param path DOCUMENT ME!
-     * @param context DOCUMENT ME!
      *
      * @return DOCUMENT ME!
      */
