@@ -1,0 +1,6 @@
+int,int,int,int,int,int,int,int,int,int,string,string
+xuehao,yuwen,shuxue,yingyu,zz,lishi,dili,wuli,huaxue,shengwu,tiyu,zp
+1,80,90,78,82,97,77,87,84,90,ÓÅ,¼×
+2,80,65,77,70,91,65,67,87,65,Á¼,ÒÒ
+3,85,99,96,88,100,96,98,100,908,Á¼,¼×
+4,80,90,78,82,97,67,67,87,90,ÓÅ,ÒÒ

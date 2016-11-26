@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jatools Class="[Ljatools.designer.JdbcProvider;" ItemClass="jatools.designer.JdbcProvider" Len="12"
+         Name="jatools report template">
+    <Item0>
+        <Name>demo</Name>
+        <Driver>org.hsqldb.jdbcDriver</Driver>
+        <User>sa</User>
+        <PasswordX>PTie1Xa63Jg=,TmDrMYl2pIY=</PasswordX>
+        <Url>jdbc:hsqldb:./demosdb/mydb</Url>
+    </Item0>
+    <Item2>
+        <Name>JndiDatasource(应用服务器连接池)</Name>
+        <Driver>com.jatools.db.JndiDriver</Driver>
+        <PasswordX>XjffqIMCzms=,fkBqEi4Gzcs=</PasswordX>
+        <Url>
+            FACTORY=weblogic.jndi.WLInitialContextFactory;URL=t3://localhost:7001;DATASOURCE=examples-dataSource-demoPool
+        </Url>
+    </Item2>
+    <Item3>
+        <Name>ph.ds (默认)</Name>
+        <Driver>com.jatools.db.JndiDriver</Driver>
+        <User>reporter</User>
+        <PasswordX>6Q28jCqof48=,psfqTwoNkXu85S2JhZiwxg==</PasswordX>
+        <Url>DATASOURCE=java:comp/env/jdbc/oracleDS</Url>
+    </Item3>
+</jatools>

@@ -1,0 +1,4 @@
+int,int,int,int,int,int,int
+type,girl,ssmz,shili,tingli,zhi,total
+0,600,258,50,80,3,1300
+1,800,350,45,67,5,1500

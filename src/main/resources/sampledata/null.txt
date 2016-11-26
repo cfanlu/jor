@@ -1,0 +1,9 @@
+int,string
+count,name 
+0,12     
+0,fdsaf  
+0,fad   
+0,fadsf
+0,fsdf 
+0,fdsf   
+0,fds 

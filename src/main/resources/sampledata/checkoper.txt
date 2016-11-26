@@ -1,0 +1,5 @@
+string,string,string,string,int,string
+qjbh,jyqj,qjzt,jqy,dw,ggwj
+1,台式机,良,李明,20,规格文件1
+2,台式机,良,马红,50,规格文件2
+3,黑白电视,良,马红,100,规格文件4

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jatools Class="com.jatools.designer.config.UserX" Name="jatools report template">
+    <DefaultJdbcDriver>lcga</DefaultJdbcDriver>
+    <DefaultLookAndFeel>com.sun.java.swing.plaf.windows.WindowsLookAndFeel</DefaultLookAndFeel>
+    <LookAndFeels ItemClass="com.jatools.designer.ZLookAndFeel">
+        <Item0>
+            <Description>Motif</Description>
+            <L2fClassName>com.sun.java.swing.plaf.motif.MotifLookAndFeel</L2fClassName>
+        </Item0>
+        <Item1>
+            <Description>Metal</Description>
+            <L2fClassName>javax.swing.plaf.metal.MetalLookAndFeel</L2fClassName>
+        </Item1>
+        <Item2>
+            <Description>Windows</Description>
+            <L2fClassName>com.sun.java.swing.plaf.windows.WindowsLookAndFeel</L2fClassName>
+        </Item2>
+        <Item3>
+            <Description>Compiere</Description>
+            <L2fClassName>org.compiere.plaf.CompiereLookAndFeel</L2fClassName>
+        </Item3>
+    </LookAndFeels>
+    <PredefinedJdbcDrivers ItemClass="com.jatools.designer.ZJdbcDriver">
+        <Item0>
+            <Name>MySQL</Name>
+            <Driver>com.mysql.jdbc.Driver</Driver>
+            <PasswordX>3CXxyMhuv7w=,EmFhZgEMVSY=</PasswordX>
+            <Url>jdbc:mysql://localhost/myDB</Url>
+        </Item0>
+        <Item1>
+            <Name>IBM DB2</Name>
+            <Driver>COM.ibm.db2.jdbc.app.DB2Driver</Driver>
+            <Url>jdbc:db2://localhost:5000/sample</Url>
+        </Item1>
+        <Item2>
+            <Name>Oracle</Name>
+            <Driver>oracle.jdbc.driver.OracleDriver</Driver>
+            <Url>jdbc:oracle:thin:@localhost:1521:test</Url>
+        </Item2>
+        <Item3>
+            <Name>Sybase</Name>
+            <Driver>com.sybase.jdbc2.jdbc.SybDriver</Driver>
+            <Url>jdbc:sybase:Tds:localhost:5007/myDB</Url>
+        </Item3>
+        <Item4>
+            <Name>MSSQL 2000</Name>
+            <Driver>com.microsoft.jdbc.sqlserver.SQLServerDriver</Driver>
+            <Url>jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=mydb</Url>
+        </Item4>
+        <Item5>
+            <Name>ODBC-JDBC Bridge</Name>
+            <Driver>sun.jdbc.odbc.JdbcOdbcDriver</Driver>
+            <Url>jdbc:odbc:driver={Microsoft Access Driver (*.mdb)};DBQ=dbdemos.mdb</Url>
+        </Item5>
+        <Item6>
+            <Name>Demo</Name>
+            <Driver>org.hsqldb.jdbcDriver</Driver>
+            <User>sa</User>
+            <Url>jdbc:hsqldb:./demosdb/mydb</Url>
+        </Item6>
+        <Item7>
+            <Name>JndiDatasource(应用服务器连接池连接)</Name>
+            <Driver>com.jatools.db.JndiDriver</Driver>
+            <Url>
+                FACTORY=weblogic.jndi.WLInitialContextFactory;URL=t3://localhost:7001;DATASOURCE=examples-dataSource-demoPool
+            </Url>
+        </Item7>
+        <Item8>
+            <Name>Informix</Name>
+            <Driver>com.informix.jdbc.IfxDriver</Driver>
+            <PasswordX>DroLVIOeHA4=,iaFmYKCWBTY=</PasswordX>
+            <Url>jdbc:informix-sqli://localhost:1533/testDB:INFORMIXSERVER=myserver</Url>
+        </Item8>
+        <Item9>
+            <Name>lcga</Name>
+            <Driver>oracle.jdbc.driver.OracleDriver</Driver>
+            <User>crjdev</User>
+            <PasswordX>wnDIVyCbzWg=,GcovGPfc42CnxlrclSc7GQ==</PasswordX>
+            <Url>jdbc:oracle:thin:@10.160.11.6:1521:crjdb</Url>
+        </Item9>
+    </PredefinedJdbcDrivers>
+    <UserDefinedComponents ItemClass="com.jatools.designer.ZUserDefinedComponent">
+        <Item0>
+            <Description>MyCheckBox</Description>
+            <Icon>/com/icons/checkbox.gif</Icon>
+            <IntanceClassName>userx.MyCheckBox</IntanceClassName>
+        </Item0>
+    </UserDefinedComponents>
+</jatools>

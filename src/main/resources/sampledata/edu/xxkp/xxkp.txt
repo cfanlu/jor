@@ -1,0 +1,5 @@
+int,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string,string
+xuehao,juming,name,sex,birthday,jiguan,nation,address,telephone,father_name,father_age,father_zz,father_job,father_tel,mother_name,mother_age,mother_zz,mother_job,mother_tel,rx,bysj
+1,居民,李建发,男,1988-10-10,浙江杭州,汉族,浙江杭州西湖区翠园1区3单元301室,0571-89897623,李龙,44,党员,教师,13888895630,王海霞,40,无党派,医生,13454546321,1997-9,2000-6
+2,居民,郭丽芳,女,1989-03-13,浙江杭州,汉族,浙江杭州湖墅路100号3单元301室,0571-89827323,郭经,49,无党派,工程师,1384890083,刘美,45,无党派,工人,1345453340,1997-9,2000-6
+3,农民,何彩椒,女,1990-08-27,浙江台州,汉族,浙江台州路桥解放路102号7单元202室,0576-87863113,何昌斌,48,党员,生意人,138887663,王海霞,41,无党派,生意人,1378860598,1997-9,2000-6

@@ -1,0 +1,3 @@
+int,string,int,string,int,string,string,string,string,string,string,int,int,string,string,int,string,string,string,string,string,int
+wjbh,bb,bgbh,bgrq,yclbh,yclms,yclmpn,gysmc,gysbh,gyswlbh,cjfa,cjsl,yssl,ddh,pch,pcsl,fyh,fhrq,yclsx,jyrq,jcbl,blsl
+1,1.0,1,2008-01-01,1,黑白电视机,123,苏宁,1234,12341,随机抽检,30,20,1111,1222,40,2345,2008-01-01,固体,2008-01-01,是,20

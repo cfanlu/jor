@@ -1,0 +1,3 @@
+string,string,string,string,string,string,string,string,string,string,string,string,int,string,string,string,string
+name,性别,出生日期,籍贯,身份证号码,婚否,现住址,联系电话,手机,学历,毕业院校,紧急联系人,紧急联系电话,与本人关系,地址,填表日期,编号
+张三,男,1975年6月1日,杭州,330102197506015557,否,杭州市文三路天苑花园3幢201室,0571-65892145,13316820968,大学,浙江大学,母亲,88985645,母女,西湖区西斗门路8号,2005年7月10日,1号
