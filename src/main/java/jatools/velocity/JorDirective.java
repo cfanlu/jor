@@ -28,8 +28,6 @@ import java.util.Map;
 
 /**
  * 第一个参数为报表文件资源地址,后续都为报表参数,参数名称为velocity变量名称,参数值对应变量值
- * Created by lujun on 16/11/24.
- * Copyright © 2014-2016 ants-city.com
  */
 public class JorDirective extends Directive {
 
