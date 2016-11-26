@@ -6,3 +6,5 @@
 *.ipr
 
 /target/
+
+jor.log
