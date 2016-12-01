@@ -13,7 +13,7 @@
     <groupId>com.jatools</groupId>
     <artifactId>jor</artifactId>
     <packaging>jar</packaging>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -24,6 +24,7 @@
         <commons-httpclient.version>3.1</commons-httpclient.version>
         <commons-beanutils.version>1.9.1</commons-beanutils.version>
         <commons-codec.version>1.10</commons-codec.version>
+        <local-lib.version>1.2-RELEASE</local-lib.version>
     </properties>
 
     <dependencies>
@@ -33,18 +34,21 @@
             <version>3.1.0</version>
             <scope>provided</scope>
         </dependency>
+        
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
             <artifactId>jsp-api</artifactId>
             <version>2.2</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
             <version>${hsqldb.version}</version>
             <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-velocity</artifactId>
@@ -76,61 +80,78 @@
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-barcode4j</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-bsh2.0</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-chart</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-flash</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-itext</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-jaxen1.1.1</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-jsqlparser</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-jxl</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-swingx-0.9.2</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-xercesImpl</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.jatools</groupId>
+            <artifactId>jor-xmlParserAPIs</artifactId>
+            <version>${local-lib.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
-            <!--打包和编译时候包含lib-->
-            <plugin>
-                <groupId>com.googlecode.addjars-maven-plugin</groupId>
-                <artifactId>addjars-maven-plugin</artifactId>
-                <version>1.0.5</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>add-jars</goal>
-                        </goals>
-                        <configuration>
-                            <resources>
-                                <resource>
-                                    <directory>${basedir}/lib</directory>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/classes/lib</outputDirectory>
-                            <includeGroupIds>com.jatools</includeGroupIds>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                        </manifest>
-                        <manifestEntries>
-                            <Class-Path>lib/</Class-Path>
-                        </manifestEntries>
-                    </archive>
-                </configuration>
-            </plugin>
             <!--打包所有引用到jar中-->
             <!--<plugin>-->
                 <!--<groupId>org.springframework.boot</groupId>-->
