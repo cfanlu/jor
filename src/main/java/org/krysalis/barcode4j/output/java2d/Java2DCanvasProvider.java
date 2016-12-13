@@ -24,6 +24,7 @@ import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 
 import org.krysalis.barcode4j.BarcodeDimension;
+import org.krysalis.barcode4j.TextAlignment;
 import org.krysalis.barcode4j.output.AbstractCanvasProvider;
 import org.krysalis.barcode4j.tools.UnitConv;
 
@@ -132,6 +133,12 @@ public class Java2DCanvasProvider extends AbstractCanvasProvider {
     /** @see org.krysalis.barcode4j.output.CanvasProvider */
     public void deviceCenteredText(String text, double x1, double x2, double y1, String fontName,
         double fontSize) {
+        deviceCenteredText(text, x1, x2, y1, fontName, fontSize, false);
+    }
+
+    //@add-new-code
+    public void deviceText(String text, double x1, double x2, double y1,
+                           String fontName, double fontSize, TextAlignment textAlign) {
         deviceCenteredText(text, x1, x2, y1, fontName, fontSize, false);
     }
 

@@ -174,7 +174,7 @@ public abstract class AbstractSerializer implements XmlSerializer {
 	 * 
 	 * @return DOCUMENT ME!
 	 */
-	protected String getText(Element e) {
+	protected String getText(Node e) {
 		if (e.getFirstChild() != null)
 			return e.getFirstChild().getNodeValue();
 		else
@@ -202,7 +202,7 @@ public abstract class AbstractSerializer implements XmlSerializer {
 	 * 
 	 * @return DOCUMENT ME!
 	 */
-	protected int intValue(Element e) {
+	protected int intValue(Node e) {
 		return Integer.parseInt(getText(e));
 	}
 
@@ -214,7 +214,7 @@ public abstract class AbstractSerializer implements XmlSerializer {
 	 * 
 	 * @return DOCUMENT ME!
 	 */
-	protected float floatValue(Element e) {
+	protected float floatValue(Node e) {
 		return Float.parseFloat(getText(e));
 	}
 
@@ -226,7 +226,7 @@ public abstract class AbstractSerializer implements XmlSerializer {
 	 * 
 	 * @return DOCUMENT ME!
 	 */
-	protected double doubleValue(Element e) {
+	protected double doubleValue(Node e) {
 		return Double.parseDouble(getText(e));
 	}
 

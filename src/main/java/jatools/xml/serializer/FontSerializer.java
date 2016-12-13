@@ -3,7 +3,9 @@ package jatools.xml.serializer;
 import java.awt.Font;
 
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.w3c.dom.Text;
 
 
 public class FontSerializer extends AbstractSerializer {
@@ -32,7 +34,7 @@ public class FontSerializer extends AbstractSerializer {
         int size = 12;
 
         for (int i = 0; i < nodeList.getLength(); i++) {
-            Element fieldNode = (Element) nodeList.item(i);
+            Node fieldNode = nodeList.item(i);
             String fieldName = fieldNode.getNodeName();
 
             if (fieldName.equals(FACE)) {
