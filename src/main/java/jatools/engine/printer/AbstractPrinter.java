@@ -20,18 +20,15 @@ import jatools.engine.imgloader.ImageLoader;
 import jatools.engine.layout.PrinterLayout;
 import jatools.engine.script.Context;
 import jatools.engine.script.Script;
+import org.jaxen.JaxenException;
+import org.jaxen.dom.DOMXPath;
+import org.w3c.dom.Node;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
-
-import org.jaxen.JaxenException;
-import org.jaxen.XPath;
-import org.jaxen.dom.DOMXPath;
-import org.w3c.dom.Node;
 
 /**
  * DOCUMENT ME!

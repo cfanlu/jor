@@ -84,7 +84,7 @@ public class ReportTag extends AbstractReportTag {
         try {
             HttpServletRequest request = (HttpServletRequest) pageContext.getRequest();
             InputStream is = null;
-            String xmluuid = (String) request.getParameter("xmluuid");
+            String xmluuid = (String) request.getAttribute("xmluuid");
 
             if (xmluuid != null) {
                 String xml = (String) request.getSession().getServletContext().getAttribute(xmluuid);
