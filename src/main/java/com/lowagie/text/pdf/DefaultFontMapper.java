@@ -8,11 +8,17 @@ package com.lowagie.text.pdf;
 import com.lowagie.text.ExceptionConverter;
 import com.lowagie.text.pdf.BaseFont;
 import com.lowagie.text.pdf.FontMapper;
+import org.apache.log4j.Logger;
+
 import java.awt.Font;
 import java.io.File;
+import java.lang.invoke.MethodHandles;
 import java.util.HashMap;
 
 public class DefaultFontMapper implements FontMapper {
+
+    static Logger logger = Logger.getLogger(MethodHandles.lookup().lookupClass());
+
     //modify by henry change default font
     private static final String DEFALUT_FONT = "STSong";
     public static BaseFont defaultFont;
@@ -161,6 +167,7 @@ public class DefaultFontMapper implements FontMapper {
                         ++count;
                     }
                 } catch (Exception var11) {
+                    logger.error(var11);
                 }
             }
 
@@ -169,6 +176,7 @@ public class DefaultFontMapper implements FontMapper {
                 defaultFont = BaseFont.createFont(var13.fontName, var13.encoding, var13.embedded, var13.cached, var13.ttfAfm, var13.pfb);
             }catch (Exception ex) {
                 ex.printStackTrace();
+                logger.error(ex);
             }
 
             return count;
