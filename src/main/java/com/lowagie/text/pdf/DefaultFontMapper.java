@@ -47,7 +47,7 @@ public class DefaultFontMapper implements FontMapper {
                 if(defaultFont != null) {
                     return defaultFont;
                 } else {
-                    throw new ExceptionConverter(new Exception("既找不到字体 [" + font.getFontName() + " ],也找不到默认字体."));
+                    throw new ExceptionConverter(new Exception("既找不到字体 [" + font.getFontName() + " ],也找不到默认字体STSong."));
                 }
             } else {
                 BaseFont base1 = BaseFont.createFont(p.fontName, p.encoding, p.embedded, p.cached, p.ttfAfm, p.pfb);
