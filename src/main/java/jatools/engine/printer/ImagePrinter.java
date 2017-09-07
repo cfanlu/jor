@@ -42,8 +42,10 @@ public class ImagePrinter extends AbstractPrinter implements PropertyChangeListe
                 loader.load(lastcss);
             }
 
-            boolean isfield = (lastcss != null) && (lastcss.getImageFileSrc() != null) &&
-                lastcss.getImageFileSrc().startsWith(Image.SOURCE_DATASET_FIELD);
+            //modify by henry @ 17/09/08
+            boolean isfield = (lastcss != null) &&
+                    (lastcss.getImageFileSrc() != null) &&
+                    (lastcss.getImageFileSrc().startsWith(Image.SOURCE_DATASET_FIELD) || lastcss.getImageFileSrc().startsWith(Image.SOURCE_URL));
 
             if (!isfield) {
                 cssdirty = false;
