@@ -10,7 +10,7 @@ import java.io.OutputStream;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
-import com.lowagie.text.pdf.DefaultFontMapper;
+import jatools.engine.export.JorFontMapper;
 import com.lowagie.text.pdf.PdfContentByte;
 import com.lowagie.text.pdf.PdfTemplate;
 import com.lowagie.text.pdf.PdfWriter;
@@ -25,7 +25,7 @@ import com.lowagie.text.pdf.PdfWriter;
 public class PdfExport {
     static boolean DEBUG = false;
     static int PAGE_LIMITS = 200;
-    static DefaultFontMapper mapper;
+    static JorFontMapper mapper;
     PdfWriter writer;
     Document document;
     private OutputStream os;
@@ -38,7 +38,7 @@ public class PdfExport {
      */
     public PdfExport(OutputStream os, Dimension size) {
         if (mapper == null) {
-            mapper = new DefaultFontMapper();
+            mapper = new JorFontMapper();
 
             String fontDirs = System2.getProperty("font.dirs");
             String[] dirs = fontDirs.split(";");

@@ -3,7 +3,7 @@
 // (powered by Fernflower decompiler)
 //
 
-package com.lowagie.text.pdf;
+package jatools.engine.export;
 
 import com.lowagie.text.ExceptionConverter;
 import com.lowagie.text.pdf.BaseFont;
@@ -15,7 +15,7 @@ import java.io.File;
 import java.lang.invoke.MethodHandles;
 import java.util.HashMap;
 
-public class DefaultFontMapper implements FontMapper {
+public class JorFontMapper implements FontMapper {
 
     static Logger logger = Logger.getLogger(MethodHandles.lookup().lookupClass());
 
@@ -25,13 +25,13 @@ public class DefaultFontMapper implements FontMapper {
     private HashMap aliases = new HashMap();
     private HashMap mapper = new HashMap();
 
-    public DefaultFontMapper() {
+    public JorFontMapper() {
     }
 
     public BaseFont awtToPdf(Font font) {
         try {
             boolean e = false;
-            DefaultFontMapper.BaseFontParameters p = this.getBaseFontParameters(font.getFontName());
+            JorFontMapper.BaseFontParameters p = this.getBaseFontParameters(font.getFontName());
             if(p == null) {
                 int base = font.getStyle();
                 if(base != 0) {
@@ -61,6 +61,7 @@ public class DefaultFontMapper implements FontMapper {
                 return BaseFont.createFont(p.fontName, p.encoding, p.embedded, p.cached, p.ttfAfm, p.pfb);
             }
         } catch (Exception var6) {
+            logger.error(var6);
             throw new ExceptionConverter(var6);
         }
     }
@@ -96,7 +97,7 @@ public class DefaultFontMapper implements FontMapper {
         }
     }
 
-    public void putName(String awtName, DefaultFontMapper.BaseFontParameters parameters) {
+    public void putName(String awtName, JorFontMapper.BaseFontParameters parameters) {
         this.mapper.put(awtName, parameters);
     }
 
@@ -104,13 +105,13 @@ public class DefaultFontMapper implements FontMapper {
         this.aliases.put(alias, awtName);
     }
 
-    public DefaultFontMapper.BaseFontParameters getBaseFontParameters(String name) {
+    public JorFontMapper.BaseFontParameters getBaseFontParameters(String name) {
         String alias = (String)this.aliases.get(name);
         if(alias == null) {
-            return (DefaultFontMapper.BaseFontParameters)this.mapper.get(name);
+            return (JorFontMapper.BaseFontParameters)this.mapper.get(name);
         } else {
-            DefaultFontMapper.BaseFontParameters p = (DefaultFontMapper.BaseFontParameters)this.mapper.get(alias);
-            return p == null?(DefaultFontMapper.BaseFontParameters)this.mapper.get(name):p;
+            JorFontMapper.BaseFontParameters p = (JorFontMapper.BaseFontParameters)this.mapper.get(alias);
+            return p == null?(JorFontMapper.BaseFontParameters)this.mapper.get(name):p;
         }
     }
 
@@ -129,7 +130,7 @@ public class DefaultFontMapper implements FontMapper {
             main = names[0][3];
         }
 
-        DefaultFontMapper.BaseFontParameters var6 = new DefaultFontMapper.BaseFontParameters(path);
+        JorFontMapper.BaseFontParameters var6 = new JorFontMapper.BaseFontParameters(path);
         this.mapper.put(main, var6);
 
         for(int var7 = 0; var7 < names.length; ++var7) {
@@ -172,7 +173,7 @@ public class DefaultFontMapper implements FontMapper {
             }
 
             try {
-                DefaultFontMapper.BaseFontParameters var13 = this.getBaseFontParameters(DEFALUT_FONT);
+                JorFontMapper.BaseFontParameters var13 = this.getBaseFontParameters(DEFALUT_FONT);
                 defaultFont = BaseFont.createFont(var13.fontName, var13.encoding, var13.embedded, var13.cached, var13.ttfAfm, var13.pfb);
             }catch (Exception ex) {
                 ex.printStackTrace();

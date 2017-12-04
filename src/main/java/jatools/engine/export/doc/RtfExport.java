@@ -46,7 +46,7 @@ import com.lowagie.text.Image;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.Table;
 import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.DefaultFontMapper;
+import jatools.engine.export.JorFontMapper;
 import com.lowagie.text.rtf.RtfTableCell;
 import com.lowagie.text.rtf.RtfWriter;
 
@@ -58,7 +58,7 @@ import com.lowagie.text.rtf.RtfWriter;
  * Preferences - Java - Code Style - Code Templates
  */
 public class RtfExport extends BasicExport {
-    static DefaultFontMapper mapper;
+    static JorFontMapper mapper;
     static HashMap baseFonts = new HashMap();
     public static final TableCell OCCUPIED_CELL = new TableCell(new TextView(), 0, 0, 1, 1);
     private static TableCell[][] grid;
