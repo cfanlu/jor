@@ -20,7 +20,7 @@ public class JorFontMapper implements FontMapper {
     static Logger logger = Logger.getLogger(MethodHandles.lookup().lookupClass());
 
     //modify by henry change default font
-    private static final String DEFALUT_FONT = "STSong";
+    private static final String DEFALUT_FONT = "SimSun";
     public static BaseFont defaultFont;
     private HashMap aliases = new HashMap();
     private HashMap mapper = new HashMap();
@@ -53,7 +53,7 @@ public class JorFontMapper implements FontMapper {
                 if(defaultFont != null) {
                     return defaultFont;
                 } else {
-                    throw new ExceptionConverter(new Exception("既找不到字体 [" + font.getFontName() + " ],也找不到默认字体STSong."));
+                    throw new ExceptionConverter(new Exception("既找不到字体 [" + font.getFontName() + " ],也找不到默认字体SimSun."));
                 }
             } else {
                 BaseFont base1 = BaseFont.createFont(p.fontName, p.encoding, p.embedded, p.cached, p.ttfAfm, p.pfb);

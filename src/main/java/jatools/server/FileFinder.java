@@ -69,7 +69,8 @@ public class FileFinder {
                 }
             }
 
-            request.getSession().setAttribute(file, null);
+            //remove by henry for print
+            //request.getSession().setAttribute(file, null);
         }
     }
 }

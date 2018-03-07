@@ -13,7 +13,7 @@
     <groupId>com.jatools</groupId>
     <artifactId>jor</artifactId>
     <packaging>jar</packaging>
-    <version>1.9.5-SNAPSHOT</version>
+    <version>1.9.8-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

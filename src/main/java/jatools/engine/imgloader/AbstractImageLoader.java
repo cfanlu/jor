@@ -39,7 +39,7 @@ public abstract class AbstractImageLoader implements ImageLoader {
         if (src.startsWith("url")) {
             src = src.substring("url".length() + 1);
             //modify by henry @ 17/09/07
-            if (src.startsWith("$")) {
+            if (src.startsWith("$") || src.startsWith("=$")) {
                 Script script = this.getScript();
                 Object urlObj = script.get(src);
                 if (urlObj != null) {
