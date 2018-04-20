@@ -37,18 +37,18 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import com.lowagie.text.Cell;
-import com.lowagie.text.Chunk;
-import com.lowagie.text.Document;
-import com.lowagie.text.Element;
-import com.lowagie.text.Font;
-import com.lowagie.text.Image;
-import com.lowagie.text.Paragraph;
-import com.lowagie.text.Table;
-import com.lowagie.text.pdf.BaseFont;
+import com.lowagie1.text.Cell;
+import com.lowagie1.text.Chunk;
+import com.lowagie1.text.Document;
+import com.lowagie1.text.Element;
+import com.lowagie1.text.Font;
+import com.lowagie1.text.Image;
+import com.lowagie1.text.Paragraph;
+import com.lowagie1.text.Table;
+import com.lowagie1.text.pdf.BaseFont;
 import jatools.engine.export.JorFontMapper;
-import com.lowagie.text.rtf.RtfTableCell;
-import com.lowagie.text.rtf.RtfWriter;
+import com.lowagie1.text.rtf.RtfTableCell;
+import com.lowagie1.text.rtf.RtfWriter;
 
 
 /**
@@ -78,7 +78,7 @@ public class RtfExport extends BasicExport {
      */
     public RtfExport(OutputStream os, Dimension size) {
         if (size != null) {
-            document = new Document(new com.lowagie.text.Rectangle(size.width, size.height), 0f,
+            document = new Document(new com.lowagie1.text.Rectangle(size.width, size.height), 0f,
                     0f, 0f, 0);
         } else {
             document = new Document();

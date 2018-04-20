@@ -10,10 +10,10 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.ArrayList;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfWriter;
+import com.lowagie1.text.Document;
+import com.lowagie1.text.pdf.PdfContentByte;
+import com.lowagie1.text.pdf.PdfReader;
+import com.lowagie1.text.pdf.PdfWriter;
 
 
 /**

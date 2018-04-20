@@ -5,9 +5,9 @@
 
 package jatools.engine.export;
 
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.pdf.BaseFont;
-import com.lowagie.text.pdf.FontMapper;
+import com.lowagie1.text.ExceptionConverter;
+import com.lowagie1.text.pdf.BaseFont;
+import com.lowagie1.text.pdf.FontMapper;
 import org.apache.log4j.Logger;
 
 import java.awt.Font;

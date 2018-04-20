@@ -3,16 +3,16 @@
 // (powered by Fernflower decompiler)
 //
 
-package com.lowagie.text.pdf;
+package com.lowagie1.text.pdf;
 
-import com.lowagie.text.DocumentException;
-import com.lowagie.text.ExceptionConverter;
-import com.lowagie.text.pdf.PdfArray;
-import com.lowagie.text.pdf.PdfDictionary;
-import com.lowagie.text.pdf.PdfIndirectReference;
-import com.lowagie.text.pdf.PdfName;
-import com.lowagie.text.pdf.PdfNumber;
-import com.lowagie.text.pdf.PdfWriter;
+import com.lowagie1.text.DocumentException;
+import com.lowagie1.text.ExceptionConverter;
+import com.lowagie1.text.pdf.PdfArray;
+import com.lowagie1.text.pdf.PdfDictionary;
+import com.lowagie1.text.pdf.PdfIndirectReference;
+import com.lowagie1.text.pdf.PdfName;
+import com.lowagie1.text.pdf.PdfNumber;
+import com.lowagie1.text.pdf.PdfWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

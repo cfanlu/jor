@@ -8,12 +8,12 @@ import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.io.OutputStream;
 
-import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
+import com.lowagie1.text.Document;
+import com.lowagie1.text.DocumentException;
 import jatools.engine.export.JorFontMapper;
-import com.lowagie.text.pdf.PdfContentByte;
-import com.lowagie.text.pdf.PdfTemplate;
-import com.lowagie.text.pdf.PdfWriter;
+import com.lowagie1.text.pdf.PdfContentByte;
+import com.lowagie1.text.pdf.PdfTemplate;
+import com.lowagie1.text.pdf.PdfWriter;
 
 
 /**
@@ -52,7 +52,7 @@ public class PdfExport {
             }
         }
 
-        document = new Document(new com.lowagie.text.Rectangle(209.97f, 296.97f), 0f, 0f, 0f, 0);
+        document = new Document(new com.lowagie1.text.Rectangle(209.97f, 296.97f), 0f, 0f, 0f, 0);
 
         if (DEBUG) {
             System.out.println("now document is null ? " + (document == null) + "\n");
@@ -90,7 +90,7 @@ public class PdfExport {
                        8.2677 * 72 = 595 points
                        29.7 cm / 2.54 = 11.6929 inch
                        11.6929 * 72 = 842 points*/
-                document.setPageSize(new com.lowagie.text.Rectangle(w, h));
+                document.setPageSize(new com.lowagie1.text.Rectangle(w, h));
                 document.setMargins(0f, 0f, 0f, 0f);
 
                 try {

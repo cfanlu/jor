@@ -20,6 +20,7 @@ import jatools.formatter.DateFormat;
 
 import jatools.io.DefaultResourceOutputFactory;
 import jatools.io.ResourceOutputFactory;
+import org.apache.xpath.operations.Bool;
 
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStreamWriter;
@@ -44,6 +45,9 @@ import javax.servlet.http.HttpServletResponse;
  * @version $Revision$
   */
 public class ReportExporter extends ReportActionBase {
+
+    public static String DO_EXPORT_PARAM = "do_export";
+
     /**
      * DOCUMENT ME!
      *
@@ -66,11 +70,34 @@ public class ReportExporter extends ReportActionBase {
             ext = "txt";
         }
 
-        String file = getFileName(job, ext);
 
-        response.setContentType("application/x-filler");
-        response.setHeader("Content-Disposition",
-            "attachment;filename=" + URLEncoder.encode(file, "UTF-8"));
+        //change by henry at 2018/3/8 for print
+        Boolean isExport = getIsExport(job);
+        if (isExport) {
+            response.setContentType("application/x-filler");
+
+            String file = getFileName(job, ext);
+            response.setHeader("Content-Disposition",
+                    "attachment;filename=" + URLEncoder.encode(file, "UTF-8"));
+        }
+        else {
+            switch (as) {
+                case "pdf":
+                    response.setContentType("application/pdf");
+                    break;
+                case "xls":
+                case "xlsn":
+                    response.setContentType("application/x-xls");
+                    break;
+                case "rtf":
+                    response.setContentType("application/x-rtf");
+                    break;
+                default:
+                    response.setContentType("application/x-filler");
+                    break;
+            }
+        }
+
 
         ServletOutputStream os = response.getOutputStream();
 
@@ -120,6 +147,16 @@ public class ReportExporter extends ReportActionBase {
         }
 
         return result;
+    }
+
+    private static Boolean getIsExport(ReportJob job) {
+        String doExport = (String) job.getParameter(ReportJob.DO_EXPORT_PARAM);
+
+        if (doExport == null || doExport.equals("0")) {
+            return false;
+        }
+
+        return true;
     }
 
     private static Script prepareScriptEngine(ReportJob job) {
